@@ -155,7 +155,7 @@ public class MovementsServiceImpl implements MovementsService{
 			return new ResponseReport( "Debe haber al menos un filtro de búsqueda",movementList);
 		}
 		if(dateRange!=null  && !dateRange.isEmpty()) {
-			String[] dates= dateRange.split("-");
+			String[] dates= dateRange.split("--");
 			if(dates.length!= 2) {
 				return new ResponseReport( "Rango de fechas incorrecto",movementList);
 			}
